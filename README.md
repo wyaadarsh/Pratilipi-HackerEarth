@@ -12,6 +12,8 @@ JSON as interim data layer.
 
 ### Setup
 
+**You can also use the docker file provided instead of creating virtual environment**
+
 Since the project is entirely written in Python, you can use a virtual
 environment to keep the dependencies same as the other fellow
 developers. A virtual environment can be created/used as follows:
