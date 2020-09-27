@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "99cce130-c079-4f99-9a94-4f4071c8a133",
+		"name": "Pratilipi Heroku Deployed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Play Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"31c78cb9-e0d0-49ab-84dc-eb0c88f89089\",\n\t\"col\": 1\n}"
+				},
+				"url": {
+					"raw": "https://pratilipi-connect4-aadarsh.herokuapp.com/game/",
+					"protocol": "https",
+					"host": [
+						"pratilipi-connect4-aadarsh",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"game",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game State",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"b6a26dd8-23ff-4e44-8c62-c38cd7a3a026\",\n\t\"col\": 1\n}"
+				},
+				"url": {
+					"raw": "https://pratilipi-connect4-aadarsh.herokuapp.com/game/f01c8208-e9a1-463e-9912-aa898c90ae65",
+					"protocol": "https",
+					"host": [
+						"pratilipi-connect4-aadarsh",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"game",
+						"f01c8208-e9a1-463e-9912-aa898c90ae65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://pratilipi-connect4-aadarsh.herokuapp.com/START/",
+					"protocol": "https",
+					"host": [
+						"pratilipi-connect4-aadarsh",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"START",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

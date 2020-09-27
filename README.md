@@ -10,6 +10,14 @@ The project is written in Python, with MongoDB as the backbone database and
 JSON as interim data layer.
 **The project works for the multigame setup and stores game information in the db.**
 
+### POSTMAN JSON:
+
+The project has 2 files
+- Pratilipi Heroku Deployed.postman_collection.json
+- Pratilipi_local.postman_collection.json
+
+They are the collection poinitng to local as well as heroku deployment of the app with expected payload. 
+
 ### Setup
 
 **You can also use the docker file provided instead of creating virtual environment**

@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "ca160c0b-e29b-4b75-bd0e-d31eb4571a30",
+		"name": "Pratilipi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Play Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"b6a26dd8-23ff-4e44-8c62-c38cd7a3a026\",\n\t\"col\": 1\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:7070/game/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "7070",
+					"path": [
+						"game",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Game State",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"b6a26dd8-23ff-4e44-8c62-c38cd7a3a026\",\n\t\"col\": 1\n}"
+				},
+				"url": {
+					"raw": "http://0.0.0.0:7070/game/f01c8208-e9a1-463e-9912-aa898c90ae65",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "7070",
+					"path": [
+						"game",
+						"f01c8208-e9a1-463e-9912-aa898c90ae65"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://0.0.0.0:7070/START/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "7070",
+					"path": [
+						"START",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
