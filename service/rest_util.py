@@ -23,7 +23,9 @@ def play(game_id, col):
     winning_move, next_player, winner = game_obj.play(col)
     moves = "Move: {}, COL: {}  PLAYED BY: {}".format(moves_count+1, col, "YELLOW" if next_turn == 1 else "RED")
     GameModel().update(game_id, game_obj.board.board, moves, next_player, winner, winning_move)
-    return winning_move, winner
+    next_player = "YELLOW" if next_player == 1 else "RED",
+    board = game_obj.board.board
+    return {"id": game_id, "winner": winner, "winning_move": winning_move, "next_player": next_player, "board": board}
 
 
 def get_game_state(game_id):
