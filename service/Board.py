@@ -11,8 +11,11 @@ def create_board():
 
 class Board:
 
-    def __init__(self):
-        self.board = create_board()
+    def __init__(self, board_state=None):
+        if board_state:
+            self.board = board_state
+        else:
+            self.board = create_board()
 
     def play(self, col, piece):
         if self.is_valid_location(col):

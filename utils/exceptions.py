@@ -40,3 +40,12 @@ class IDNeededException(BaseError):
         errorCode = 410
         arg = {"code": errorCode, "Description": errorString}
         super(IDNeededException, self).__init__()
+
+
+class InvalidGameIDException(BaseError):
+
+    def __init__(self):
+        errorString = "Invalid id provided:"
+        errorCode = 410
+        arg = {"code": errorCode, "Description": errorString}
+        super(InvalidGameIDException, self).__init__()
