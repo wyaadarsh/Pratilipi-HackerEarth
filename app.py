@@ -6,7 +6,7 @@ Service interface for Connect4 - Pratilipi
 """
 
 import settings
-from flask import (Flask, request, make_response)
+from flask import (Flask, request, make_response, render_template)
 from service.rest_util import *
 from utils.exceptions import InvalidMoveException
 
@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def home():
-    return make_response({"status": "success"})
+    return render_template('README.html')
 
 
 @app.route('/START/', methods=['POST'])

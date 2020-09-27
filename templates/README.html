@@ -1,0 +1,60 @@
+<html>
+<head><link rel="shortcut icon"
+    href="{{ url_for('static', filename='favicon.png') }}">
+<title>Connect4</title></head>
+<p><a href="https://www.python.org/"><img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="forthebadge made-with-python" /></a></p>
+<h1 id="pratilipi-connect-4-game-under-development">Pratilipi Connect 4 Game (Under Development)</h1>
+<h3 id="introduction">Introduction</h3>
+<p>The project provides a central repository for the microservice which'll be used for interacting with Connect 4 game. The project is written in Python, with MongoDB as the backbone database and JSON as interim data layer. <strong>The project works for the multigame setup and stores game information in the db.</strong></p>
+<h3 id="postman-json">POSTMAN JSON:</h3>
+<p>The project has 2 files - Pratilipi Heroku Deployed.postman_collection.json - Pratilipi_local.postman_collection.json</p>
+<p>They are the collection poinitng to local as well as heroku deployment of the app with expected payload.</p>
+<h3 id="setup">Setup</h3>
+<p><strong>You can also use the docker file provided instead of creating virtual environment</strong></p>
+<p>Since the project is entirely written in Python, you can use a virtual environment to keep the dependencies same as the other fellow developers. A virtual environment can be created/used as follows:</p>
+<ul>
+<li><p>Using <code>pip</code>; install <code>virtualenv</code> globally:</p>
+<pre><code>$ sudo pip install virtualenv</code></pre></li>
+<li><p>Once <code>virtualenv</code> is installed, create a new environment (named <code>user_segmentation</code>) here:</p>
+<pre><code>$ virtualenv --python=python3 pratilipi</code></pre></li>
+<li><p>You can manually activate the environment using the following command:</p>
+<pre><code>$ source pratilipi/bin/acivate</code></pre></li>
+<li><p>You can exit the environment by simply executing the <code>deactivate</code> command:</p>
+<pre><code>$ deactivate</code></pre></li>
+</ul>
+<h3 id="deployment">Deployment</h3>
+<p>Once you've activated your virtual environment, you no longer need to use <code>sudo</code> to install any dependencies. Simply use the environment's local copy of <code>pip</code> and install all the required packages using the <code>requirements.txt</code> file bundled along with the project:</p>
+<pre><code>$ pip install -r requirements.txt</code></pre>
+<p>The above command shall read the dependencies from the <code>requirements.txt</code> file line-by-line, and install the same version as mentioned in the file. If you're using a new module for your project, and want to add that to the <code>requirements.txt</code> list, simply use a <code>freeze</code> command, and redirect the output to the file.</p>
+<pre><code>$ pip freeze &gt; requirements.txt</code></pre>
+<p>Simply run:</p>
+<pre><code>$ python app.py</code></pre>
+<p>The service runs on port 7070</p>
+<h3 id="data-objects">Data Objects:</h3>
+<ul>
+<li><p>GameObject: id: Game_id, col: Column to drop into</p>
+<pre><code>{
+    &quot;id&quot;: &quot;f01c8208-e9a1-463e-9912-aa898c90ae65&quot;,
+    &quot;col&quot;: 3
+}</code></pre></li>
+</ul>
+<h3 id="apis-for-interacting">APIs for interacting</h3>
+<ul>
+<li>POST- /START/</li>
+    <br>
+Used for Creating a new Game<br>
+Return a new game_id<br>
+The Project works for the Multi Game setup<br>
+<li><p>GET - /game/{game_id} For Fetching game info from game_id <code>JSON    {     &quot;success&quot;: True,     &quot;current_state&quot;: current_state of game,     &quot;move_history&quot;: move_history   }</code></p></li>
+<li><p>POST - /game/ - For playing on a particular column w.r.t. Game ID Payload:</p>
+<pre><code>JSON
+{
+    &quot;id&quot;: &lt;game_id&gt;,
+    &quot;col&quot;: int(col)
+}</code></pre></li>
+</ul>
+<h3 id="improvements">Improvements:</h3>
+<ul>
+<li>Allowing users to randomly connect and play - Maintaining user ids corresponding to game ids</li>
+</ul>
+</html>

@@ -81,9 +81,9 @@ The service runs on port 7070
 ### APIs for interacting
 
 - POST-  /START/
-   - Used for Creating a new Game
-   - Return a new game_id
-   - The Project works for the Multi Game setup
+   1. Used for Creating a new Game
+   2. Return a new game_id
+   3. The Project works for the Multi Game setup
 
 - GET - /game/{game_id}
   For Fetching game info from game_id
