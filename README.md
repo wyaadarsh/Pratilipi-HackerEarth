@@ -18,6 +18,9 @@ The project has 2 files
 
 They are the collection poinitng to local as well as heroku deployment of the app with expected payload. 
 
+### Deployed On: 
+ <a href="https://pratilipi-connect4-aadarsh.herokuapp.com/"> https://pratilipi-connect4-aadarsh.herokuapp.com/</a>
+
 ### Setup
 
 **You can also use the docker file provided instead of creating virtual environment**
