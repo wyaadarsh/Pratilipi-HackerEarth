@@ -42,6 +42,21 @@ def play_game():
     return make_response(return_obj)
 
 
+@app.route('/game2/<id>/<col>', methods=['GET'])
+def play_game2(id, col):
+    try:
+        game_data = request.json
+        game_id = game_data['id']
+        col = game_data['col']
+        return_obj = play(game_id, col)
+        return_obj["success"] = True
+    except InvalidMoveException:
+        return make_response({"success": False, "error_code": 400, "message": "Invalid Move"})
+    except:
+        return make_response({"success": False, "error_code": 410, "message": "Insufficient Payload"})
+    return make_response(return_obj)
+
+
 @app.route('/game/<id>/', methods=['GET'])
 def get_game(id):
     try:
